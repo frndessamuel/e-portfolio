@@ -6,6 +6,56 @@
     <title>Welcome</title>
     <link href="style/style.css" rel="stylesheet" >
     <link href="style/Sustainability-&-Civic-Engagement.css" rel="stylesheet" >
+    <style>
+        main {
+            box-sizing: border-box;
+            padding-inline: 24px;
+        }
+
+        .accueil-introduction {
+            width: 100%;
+            max-width: none;
+            margin-inline: 0;
+        }
+
+        .engagement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .engagement-grid section {
+            box-sizing: border-box;
+            border: 4px solid #000000;
+            padding: 18px;
+        }
+
+        .engagement-grid .futur-proches {
+            grid-column: 1 / -1;
+        }
+
+        .futur-activities {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 78px;
+        }
+
+        .futur-activities article {
+            padding: 32px;
+            border-left: 3px solid #111;
+        }
+
+        @media (max-width: 700px) {
+            .engagement-grid,
+            .futur-activities {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .engagement-grid .futur-proches {
+                grid-column: auto;
+            }
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
@@ -28,8 +78,47 @@
     <main>
         <section class="accueil-introduction">
             <div>
-                <h1>Sustainability & Civic Engagement</h1>   
+                <h1>Sustainability & Civic Engagement</h1>
+
+                <div class="engagement-grid">
+                    <section class="futur-proches">
+                        <h2>Futur proches</h2>
+                        <p style="text-align: justify;">
+                            I had the opportunity to participate in the "Futurs Proches program" including:
+                        </p>
+                        <div class="futur-activities">
+                            <article>
+                                <h3>1. What ethical standards must engineers adhere to? Engineers Without Borders</h3>
+                                <p style="text-align: justify;">
+                                    Which brings us to the role of tomorrow’s engineers. The session, led by Engineers Without Borders, allowed me to understand the ethical standards that engineers must adhere to in their professional practice. It also highlighted the importance of considering the social and environmental impact of engineering projects, as well as the need for engineers to act responsibly and ethically in their work.
+                                </p>
+                            </article>
+                            <article>
+                                <h3>2. Sexism, No Thanks</h3>
+                                <p style="text-align: justify;">
+                                    This session, with other moments organised at ENSEEIHT, enable me to be increasingly aware of best ways to recognize and combat sexism in the workplace. It also highlighted the importance of promoting gender equality and creating a more inclusive and equitable work environment for all.
+                                </p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Robotic introduction</h2>
+                        <p style="text-align: justify;">
+                            I have had the opportunity to take part in the Cordée de la réussite initiative as part of the Equal Opportunities programme. Through this initiative, I introduced middle school students to robotics, including programming lessons and participation in an event. Robotics laboratory visits also gave these young people their first glimpse into the world of science, helping some of them consider pursuing a scientific career and believe that they can succeed.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Climate</h2>
+                        <p style="text-align: justify;">
+                            Participation in a planetary boundaries fresk, which helped me understand the environmental limits within which humanity can safely develop. It raised my awareness of issues such as climate change, biodiversity loss, and the pressure our lifestyles place on natural resources. I also took part in a clean-up walk, where we collected litter and saw how everyday human activities affect public spaces and the environment. Together, these experiences encouraged me to reflect on the choices we make and the practical steps individuals and communities can take to protect our surroundings.
+                        </p>
+                    </section>
+                </div>
             </div>
+            <p> 
+            </p>
         </section>   
     </main>
     <footer>

@@ -8,7 +8,8 @@ body {
     flex-direction: column;
     font-family: 'Manrope', sans-serif;
     font-size: 1em;
-    background-color: #1f2039;
+    background-color: #1c1c1e;
+    color: #fefefe;
 }
   
 a {
@@ -17,13 +18,13 @@ a {
 }
   
 em {
-    color: #a5b4fc;
+    color: #011ca6;
     font-style: normal;
 }
   
 h1 {
     font-size: 3.5em;
-    color: #a5b4fc;
+    color: #011ca6;
     font-family: 'Montserrat', sans-serif;
 }
   
@@ -129,3 +130,16 @@ nav a {
       justify-content: center;
 }
 }  
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0e0031;
+        color: #fefefe;
+    }
+    a {
+        color: #000000;
+    }
+    img {
+        filter: grayscale(20%);
+    }
+}

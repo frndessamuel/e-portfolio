@@ -34,18 +34,6 @@
     margin-bottom: 15px;
 }
   
-.accueil-introduction-elements {
-  display: flex;
-}
-.accueil-introduction-elements .element {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.accueil-introduction-elements .lien-icone {
-  margin-left: 0;
-}
 .accueil-introduction p {
     margin-bottom: 30px;
 }

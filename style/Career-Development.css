@@ -6,7 +6,19 @@
     color: #242424;
     margin-bottom: 80px;
 }
-  
+
+.elements {
+  display: flex;
+}
+.elements .element {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.elements .lien-icone {
+  margin-left: 0;
+}
 .grid-paysages {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
