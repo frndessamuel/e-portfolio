@@ -4,7 +4,7 @@
 }
 
 .Photo-personnelle {
-    width: 256px;
+    width: min(256px, 100%);
     height: auto;
 }
 
@@ -92,4 +92,8 @@
       align-items: center;
       justify-content: center;
 }
+
+    .accueil-introduction > div {
+      width: 100%;
+    }
 }

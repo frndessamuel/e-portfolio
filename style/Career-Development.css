@@ -21,15 +21,15 @@
 }
 .grid-paysages {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 300px;
     gap: 15px;
 }
   
 .grid-portraits {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px 300px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 300px;
     gap: 15px;
 }
   
@@ -64,7 +64,32 @@
 
 @media screen and (max-width: 996px) {
     .grid-paysages {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 15px;
 }
+}
+
+@media screen and (max-width: 700px) {
+    .grid-paysages,
+    .grid-portraits {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: minmax(220px, 60vw);
+    }
+
+    main > section {
+        width: calc(100% - 32px);
+        margin: 16px auto !important;
+        padding: 24px 16px !important;
+    }
+}
+
+@media screen and (max-width: 996px) {
+    main > section > div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    main > section > div[style*="grid-template-columns: repeat(3, 1fr)"] > div {
+        border-right: 0 !important;
+        border-bottom: 2px solid #111;
+    }
 }

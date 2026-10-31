@@ -1,9 +1,11 @@
 * {
     margin: 0;
+    box-sizing: border-box;
 }
   
 body {
     min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     font-family: 'Manrope', sans-serif;
@@ -23,7 +25,7 @@ em {
 }
   
 h1 {
-    font-size: 3.5em;
+    font-size: clamp(2rem, 5vw, 3.5em);
     color: #011ca6;
     font-family: 'Montserrat', sans-serif;
 }
@@ -39,7 +41,7 @@ p,li {
   
 header,footer {
     background-color: white;
-    padding: 20px 50px;
+    padding: 20px clamp(16px, 5vw, 50px);
 }
 
 header {
@@ -74,11 +76,12 @@ a:hover {
 }
   
 section {
-    padding: 80px;
+    padding: clamp(24px, 5vw, 80px);
 }
 
 main {
   flex-grow: 1;
+  min-width: 0;
 }
 
 footer,nav {
@@ -90,6 +93,17 @@ footer,nav {
     margin-top: auto;
     flex-grow: 0;
     flex-shrink: 0;
+}
+
+nav {
+    gap: 24px;
+}
+
+nav > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 20px;
 }
 
 .footer-text {
@@ -120,7 +134,39 @@ footer a {
 }
   
 nav a {
-    margin-left: 30px;
+    margin-left: 0;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.accueil-introduction {
+    width: min(100%, 1100px);
+    gap: clamp(24px, 5vw, 64px);
+}
+
+main .accueil-introduction > div {
+    min-width: 0;
+    padding-right: 0;
+}
+
+.accueil-introduction img {
+    flex: 0 1 256px;
+    width: min(256px, 100%);
+    height: auto;
 }
 
 @media screen and (max-width: 996px) {
@@ -128,8 +174,64 @@ nav a {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 16px;
+    }
+
+    nav > div {
+        justify-content: center;
+    }
+
+    .accueil-introduction {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .accueil-introduction {
+        width: 100%;
+    }
+
+    .accueil-introduction > div {
+        width: 100%;
+    }
 }
-}  
+
+@media screen and (max-width: 600px) {
+    header,
+    footer {
+        padding: 16px;
+    }
+
+    nav > div {
+        gap: 10px 16px;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        text-align: center;
+    }
+
+    footer > div {
+        flex-basis: 100%;
+    }
+
+    section {
+        padding: 24px 16px;
+    }
+
+    main h2 {
+        margin-bottom: 32px;
+    }
+
+    .accueil-introduction img {
+        flex-basis: auto;
+    }
+}
 
 @media (prefers-color-scheme: dark) {
     body {

@@ -1,6 +1,6 @@
 .accueil-photos {
     background-color: white;
-    padding: 80px;
+    padding: clamp(16px, 5vw, 80px);
 }
   
 .accueil-photos h2 {

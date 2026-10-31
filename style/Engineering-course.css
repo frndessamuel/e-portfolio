@@ -36,7 +36,7 @@ td,th {
 }
   
 td {
-    padding: 80px;
+    padding: clamp(16px, 5vw, 80px);
 }
   
 h2 {
@@ -53,4 +53,3 @@ h1,h2 {
       display: none;
 }
 }
-
