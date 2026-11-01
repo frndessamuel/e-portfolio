@@ -20,13 +20,13 @@ a {
 }
   
 em {
-    color: #011ca6;
+    color: #163dff;
     font-style: normal;
 }
   
 h1 {
     font-size: clamp(2rem, 5vw, 3.5em);
-    color: #011ca6;
+    color: #163dff;
     font-family: 'Montserrat', sans-serif;
 }
   
